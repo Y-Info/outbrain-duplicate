@@ -1,0 +1,175 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+
+}
+img.logo_head{
+    width: auto;
+    height: 25px;
+    display: inline-block;
+    padding: 0 30px 0 0px;
+    margin: 0;
+    vertical-align: top;
+}
+nav{
+    display: inline-block;
+    margin: 10px;
+    width: calc(100% - 400px);
+}
+nav>ul>li{
+    display: inline-block;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    position: relative;
+}
+nav>ul>li:first-of-type{
+    margin: 0;
+    padding: 0;
+}
+nav>ul>li.pipe{
+    color: grey;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+nav>ul>li>a:hover{
+    text-decoration: none;
+    color: black;
+}
+nav>ul>li::before, nav>ul>li::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    opacity: 0;
+    border: 2px solid #EE6513;
+    -moz-transition: transform 0.3s,opacity 0.3s;
+    -o-transition: transform 0.3s,opacity 0.3s;
+    -webkit-transition: transform 0.3s,opacity 0.3s;
+    transition: transform 0.3s,opacity 0.3s;
+    -moz-transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+    -o-transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+    -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+}
+nav>ul>li:hover::before{
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+    -moz-transform: translate3d(-10px, 10px, 0);
+    -o-transform: translate3d(-10px, 10px, 0);
+    -ms-transform: translate3d(-10px, 10px, 0);
+    -webkit-transform: translate3d(-10px, 10px, 0);
+    transform: translate3d(-10px, 10px, 0);
+    opacity: 1;
+}
+nav>ul>li:hover::after {
+    right: 0;
+    bottom: 0;
+    border-width: 0 2px 2px 0;
+    -moz-transform: translate3d(10px, -5px, 0);
+    -o-transform: translate3d(10px, -5px, 0);
+    -ms-transform: translate3d(10px, -5px, 0);
+    -webkit-transform: translate3d(10px, -5px, 0);
+    transform: translate3d(10px, -5px, 0);
+    opacity: 1;
+}
+nav>ul>li:first-of-type::before, nav>ul>li:first-of-type::after, nav>ul>li.pipe::before, nav>ul>li.pipe::after{
+    display: none;
+}
+
+header{
+    height: auto;
+    width: 100%;
+    position: fixed;
+    display: block;
+    background-color: white;
+    z-index: 1;
+}
+button.register, button:hover.login{
+    display: inline-block;
+    width: 140px;
+    height: auto;
+    padding: 20px;
+    color: white;
+    background-color: #EE6513;
+    border: 1px solid #EE6513;
+    font-size: 15px;
+    font-weight: lighter;
+    transition: 0.3s;
+}
+button.login, button:hover.register{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 140px;
+    height: auto;
+    padding: 20px;
+    color: #EE6513;
+    background-color: #ffffff;
+    border: 1px solid #EE6513;
+    font-size: 15px;
+    font-weight: lighter;
+    transition: 0.3s;
+}
+#main{
+    padding-top: 25vh;
+    height: 75vh;
+    background-image: url(../images/background.svg);
+    background-repeat: no-repeat;
+    background-position-y: 20vh;
+    background-position-x: 90%;
+}
+#main span{
+    padding: 0 0 5.95px 0;
+    font-size: 40px;
+    line-height: 80px;
+    font-weight: bolder;
+    letter-spacing: -1px;
+}
+#main h1{
+    line-height: 110px;
+    font-size: 90px;
+    font-weight: bolder;
+    letter-spacing: 10px;
+}
+button.big_orange:first-of-type{
+    margin-right: 50px;
+}
+button.big_orange{
+    border: none;
+    margin-top: 40px;
+    width: 350px;
+    background-color: #EE6513;
+    color: #fff;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.08);
+    -o-box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.08);
+    box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0.08);
+    height: 81px;
+    line-height: 76px;
+    font-size: 20px;
+}
+.phone_scroll{
+    position: fixed;
+    top: 20vh;
+    right: 30px;
+    width: 22%;
+}
+.for_scroll{
+    height: 200vh;
+}
