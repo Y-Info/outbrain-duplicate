@@ -165,9 +165,17 @@ button.big_orange{
     font-size: 20px;
 }
 .big_orange:last-of-type:hover{
-    transform: rotate(360deg);
+    animation: treesixty 0.4s 0s ease infinite;
     transition: 0.5s;
     }
+@keyframes treesixty {
+    0% {
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(366deg);
+    }
+}
 .anim_troll{
     transition: 0.1s;
 }
