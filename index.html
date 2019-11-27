@@ -30,11 +30,11 @@
 <div id="particles-js"></div>
 <section id="main" class="container-fluid">
     <div class="row">
-        <div class="col-md-8 offset-md-1">
+        <div class=" col-md-12 col-lg-8 offset-lg-1">
             <span>The Open Web's</span>
             <h1>Discovery & Native<br/>Advertising Feed</h1>
         </div>
-        <button class="offset-md-1 big_orange"> Advertise with Us</button>
+        <button class="offset-md-1 big_orange anim_troll active" style="z-index:0;"> CLICK !</button>
         <button class="big_orange"> Publishers, Let's Talk</button>
     </div>
 </section>
@@ -52,5 +52,37 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $( ".anim_troll" ).mouseover(function() {
+            $( ".anim_troll" ).removeClass( "active" );
+            var index = $( this ).css( "z-index" );
+            var index = parseInt(index, 10);
+            var essai = index + 1;
+            if (index < 2){
+                $('.anim_troll').css({
+                    'z-index' : essai,
+                    'transform' : 'translateY('+ essai * 140 +'px)'
+                });
+                $('.anim_troll').text("RATE ! T NUL");
+            }else {
+                if (index < 3){
+                    $('.anim_troll').css({
+                        'z-index' : essai,
+                        'transform' : 'translateX('+ (essai - 2 ) * 800 +'px) translateY('+150+'px)'
+                    });
+                    $('.anim_troll').text("PRESQUE !");
+                }
+                else {
+                    $('.anim_troll').css({
+                        'z-index' : 0,
+                        'transform' : 'translateY('+ 0 +'px)'
+                    });
+                    $('.anim_troll').text("ICI ! COUCOU !");
+                }
+
+            }
+
+        });
+    </script>
 </footer>
 
